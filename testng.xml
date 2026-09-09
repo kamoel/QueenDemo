@@ -6,7 +6,7 @@
     </listeners>
 
     <test verbose="2" preserve-order="true"
-          name="C:/Users/njcel/Documents/Projects/Automation/SeleniumJava5thGroup2026">
+          name="C:\Automation Practice\QueenDemo">
         <classes>
             <class name="Tests.LoginTests">
             </class>
