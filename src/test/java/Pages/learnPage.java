@@ -2,6 +2,7 @@ package Pages;
 
 
 import Basics.loginToNdosiWebsite;
+import Utils.screenshot;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebDriver;
@@ -21,9 +22,12 @@ public class learnPage {
         WebDriver self = loginToNdosiWebsite.driver;
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[text()='Learn'])[1]"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[text()='Learn'])[1]")));
+        screenshot.capture(driver);
+
         self.findElement(By.xpath("(//*[text()='Learn'])[1]")).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[text()='Learning Materials'])[1]"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//*[text()='Learning Materials'])[1]")));
+        screenshot.capture(driver);
         self.findElement(By.xpath("(//*[text()='Learning Materials'])[1]")).click();
 
 
